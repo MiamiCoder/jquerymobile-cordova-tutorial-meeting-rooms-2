@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+
+    <link href="css/themes/2/bookit.min.css" rel="stylesheet" />
+    <link href="css/themes/2/jquery.mobile.icons.min.css" rel="stylesheet" />
+    <link href="lib/jqm/1.4.5/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <title>BookIt</title>
+</head>
+<body>
+    <div data-role="page" id="page-index">
+        <div data-role="header" data-theme="c" data-position="fixed">
+            <h1>BookIt</h1>
+        </div><!-- /header -->
+        <div role="main" class="ui-content">
+            <h2 class="mc-text-center">Welcome!</h2>
+            <p class="mc-top-margin-1-5"><b>Existing Users</b></p>
+            <a href="#page-signin" class="ui-btn ui-btn-b ui-corner-all">Sign In</a>
+            <p class="mc-top-margin-1-5"><b>Don't have an account?</b></p>
+            <a href="#page-signup" class="ui-btn ui-btn-b ui-corner-all">Sign Up</a>
+            <p></p>
+        </div><!-- /content -->
+    </div><!-- /page -->
+    <div data-role="page" id="page-signin">
+        <div data-role="header" data-theme="c" data-position="fixed">
+            <a href="#page-index" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse"></a>
+            <h1>BookIt</h1>
+        </div><!-- /header -->
+        <div role="main" class="ui-content">
+            <h3>Sign In</h3>
+            <label for="txt-email">Email Address</label>
+            <input type="text" name="txt-email" id="txt-email" value="">
+            <label for="txt-password">Password</label>
+            <input type="password" name="txt-password" id="txt-password" value="">
+            <fieldset data-role="controlgroup">
+                <input type="checkbox" name="chck-rememberme" id="chck-rememberme">
+                <label for="chck-rememberme">Remember me</label>
+            </fieldset>
+            <a href="#dlg-invalid-credentials" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>
+            <p class="mc-top-margin-1-5"><a href="begin-password-reset.html">Can't access your account?</a></p>
+            <div data-role="popup" id="dlg-invalid-credentials" data-dismissible="false" style="max-width:400px;">
+                <div role="main" class="ui-content">
+                    <h3 class="mc-text-danger">Login Failed</h3>
+                    <p>Did you enter the right credentials?</p>
+                    <div class="mc-text-center"><a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+                </div>
+            </div>
+        </div><!-- /content -->
+    </div><!-- /page -->
+    <div data-role="page" id="page-signup">
+        <div class="bi-header" data-role="header" data-theme="c" data-position="fixed">
+            <a href="#page-index" data-icon="home" data-iconpos="notext" data-transition="slide" data-direction="reverse"></a>
+            <h1>BookIt</h1>
+        </div><!-- /header -->
+        <div role="main" class="ui-content">
+            <h3>Sign Up</h3>
+            <div id="ctn-err" class="bi-invisible"></div>
+            <label for="txt-first-name">First Name</label>
+            <input type="text" name="txt-first-name" id="txt-first-name" value="">
+            <label for="txt-last-name">Last Name</label>
+            <input type="text" name="txt-last-name" id="txt-last-name" value="">
+            <label for="txt-email-address">Email Address</label>
+            <input type="text" name="txt-email-address" id="txt-email-address" value="">
+            <label for="txt-password">Password</label>
+            <input type="password" name="txt-password" id="txt-password" value="">
+            <label for="txt-password-confirm">Confirm Password</label>
+            <input type="password" name="txt-password-confirm" id="txt-password-confirm" value="">
+            <!--<a href="#dlg-sign-up-sent" data-rel="popup" data-transition="pop" data-position-to="window" id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</a>-->
+            <button id="btn-submit" class="ui-btn ui-btn-b ui-corner-all mc-top-margin-1-5">Submit</button>
+            <div data-role="popup" id="dlg-sign-up-sent" data-dismissible="false" style="max-width:400px;">
+                <div data-role="header">
+                    <h1>Almost done...</h1>
+                </div>
+                <div role="main" class="ui-content">
+                    <h3>Confirm Your Email Address</h3>
+                    <p>We sent you an email with instructions on how to confirm your email address. Please check your inbox and follow the instructions in the email.</p>
+                    <div class="mc-text-center"><a href="sign-in.html" class="ui-btn ui-corner-all ui-shadow ui-btn-b mc-top-margin-1-5">OK</a></div>
+
+                </div>
+            </div>
+        </div><!-- /content -->
+    </div><!-- /page -->
+    <div data-role="page" id="page-signup-succeeded">
+        <div data-role="header" data-theme="c">
+            <h1>Book It</h1>
+        </div><!-- /header -->
+        <div role="main" class="ui-content">
+            <h2 class="mc-text-center">Registration Succeeded</h2>
+            <p class="mc-top-margin-1-5">Congratulations!  You are now registered with BookIt.</p>
+            <a href="#page-signin" class="ui-btn ui-btn-b ui-corner-all">Sign In</a>
+            <p></p>
+        </div><!-- /content -->
+    </div><!-- /page -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="lib/fastclick/fastclick.min.js"></script>
+    <script src="lib/jquery/2.1.1/jquery-2.1.1.min.js"></script>
+    <script src="js/api-messages.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/signup-controller.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="lib/jqm/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</body>
+</html>
