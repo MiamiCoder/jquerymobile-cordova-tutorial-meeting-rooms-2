@@ -1,0 +1,32 @@
+﻿- Introduction (Goal of article and reference to prior chapter) (The goal is to implement the HTTP endpoint for
+ the User Account Controller. This endpoint will make the user registration, logon, logoff and password reset features 
+ of the Account Controller available via HTTP requests. 
+ The meeting room booking mobile app that we are building will make requests to this endpoint.)
+- Nice picture of endpoint
+- Create UserRegistration Model
+- Create UserLogon Model
+- Create UserPasswordReset Model
+- Create UserPasswordResetFinal Model
+- Add PASSWORD_CONFIRM_MISMATCH to ApiMessages model
+- Require User model in AccountController
+- Add getUserFromUserRegistration to AccountController
+- Add test for getUserFromUserRegistration method
+- Modify logon method in AccountController so it saves session id
+- Modify test of logon method
+- Modify resetPasswordFinal method in AccountController so it validates newPassword vs newPasswordConfirm
+- Modify test of resetPasswordFinal method
+- Create users.js file in routes directory
+- Declare top level variables
+- Route for account/register
+- Test with postman
+- Route for account/logon
+- Test with postman
+- Route for account/resetPassword
+- Test with postman
+- Route for account/resetPasswordFinal
+- Test with postman
+
+
+- Export module
+
+

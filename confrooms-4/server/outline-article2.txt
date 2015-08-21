@@ -1,0 +1,16 @@
+﻿- Introduction (Goal of article and reference to prior chapter)
+- Screenshot of tests
+- Install Mocha and Should
+- Create UserMock model
+- Create MailerMock model
+- Create AccountController test module
+- Declare module variables
+- Create outer describe
+- Create outer describe private variables
+- Create beforeEach and afterEach methods
+- Create tests for logon method
+- Create tests for logoff method
+- Create tests for register method
+- Create tests for resetPassword method
+- Create tests for resetPasswordFinal method
+- Create tests for hashPassword method

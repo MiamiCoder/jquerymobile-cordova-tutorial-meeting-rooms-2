@@ -1,0 +1,17 @@
+﻿- Introduction (Goal of article and reference to prior chapter)
+- Picture of calls from mobile app to server endpoint
+- Explanation of what part of the endpoint this article focuses on
+- Picture of what part of the endpoint this article focuses on
+- Install NodeJS, MongoDB, Mongoose, Mocha, crypto and uuid packages
+- Model-view-controller explanation
+- Create app directories
+- Create user model and userMock model
+- Create the controller module and explanation of input parameters
+- getSession and setSession methods
+- Create empty logon method
+- Create tests for logon method and populate method as tests are built
+- Create tests for logoff method and populate method as tests are built
+- Create tests for register method and populate method as tests are built
+- Create tests for resetPassword method and populate method as tests are built
+- Create tests for resetPasswordFinal method and populate method as tests are built
+- Create tests for hashPassword method and populate method as tests are built
